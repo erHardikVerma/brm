@@ -1,0 +1,9 @@
+deploy:
+ stage: deploy
+ script:
+ - deploy-script.sh $ENV
+ environment:
+ name: $ENV
+ url: http://example.com
+ only:
+ - master

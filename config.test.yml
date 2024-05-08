@@ -1,0 +1,9 @@
+build:
+ stage: build
+ script:
+ - npm install
+ - npm run build
+ - cp config.$ENV.json dist/config.json
+ artifacts:
+ paths:
+ - dist/
